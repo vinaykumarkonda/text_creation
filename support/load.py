@@ -1,16 +1,16 @@
 import pandas as pd
 import os
-
-file_path = os.getcwd()+'/model_training/production_data/'
-
+import streamlit as st
+file_path = os.path.dirname(os.path.join(os.path.realpath('.'), 'model_training/production_data/'))
 
 class LoadFiles():
 
     # load trained model weights
-    trained_model_weights_path = file_path+'scifi_lstm_model_with_full_data_unicode_20k_vocab_size.hdf5'
+    trained_model_weights_path = file_path+'\scifi_lstm_model_with_full_data_unicode_20k_vocab_size.hdf5'
+    
 
     # load word_lookup
-    word_lookup = pd.read_pickle(file_path+'scifi_unicode_vocab_dict.pkl')
+    word_lookup = pd.read_pickle(file_path+'\scifi_unicode_vocab_dict.pkl')
 
     # load id_lookup
-    id_lookup = pd.read_pickle(file_path+'scifi_unicode_id_lookup.pkl')
+    id_lookup = pd.read_pickle(file_path+'\scifi_unicode_id_lookup.pkl')
