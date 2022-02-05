@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-file_path = os.getcwd()+'/model_training/production_data/'
+file_path = '../model_training/production_data/'#os.getcwd()+
 
 
 class LoadFiles():
