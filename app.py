@@ -19,11 +19,12 @@ app = MultiApp()
 
 hide_streamlit_style = """
             <style>
-            #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+            
+#MainMenu {visibility: hidden;}
 
 sm.set_page_title("TextCreation")
 st.sidebar.image(favicon, width=100)
